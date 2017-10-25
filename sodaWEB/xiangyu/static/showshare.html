@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>相寓</title>
+        <meta charset="utf-8"/>
+         <link rel="stylesheet" href="./c/share.css">
+    </head>
+    <body>
+        <table>
+            <tr><td class="first">所属大区</td><td id="id_region" class="second"></td></tr>
+            <tr><td class="first">所属房源</td><td id="id_group_area" class="second"></td></tr>
+            <tr><td class="first">房间类型</td><td id="id_type" class="second"></td></tr>
+            <tr><td class="first">房间号</td><td id="id_num" class="second"></td></tr>
+            <tr><td class="first">正门密码</td><td id="id_passwordM" class="second"></td></tr>
+            <tr><td class="first">房间密码</td><td id="id_password" class="second"></td></tr>
+            <tr><td class="first">有效日期</td><td id="id_date" class="second"></td></tr>
+            <tr><td class="first">有效时间</td><td id="id_time" class="second"></td></tr>
+            <tr><td class="first">状态</td><td id="id_state" class="second" style="color:red"></td></tr>
+        </table>
+    </body>
+    <script type="text/javascript" src="./j/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="./j/common.js"></script>
+    <script type="text/javascript" src="./j/share.js"></script>
+    <script>
+         var GetTimeStr = function(Tcompare) {
+            var dd = new Date();
+            var hour = Tcompare.split("_")[0].trim();
+            var time = Tcompare.split("_")[1].trim();
+            if( parseInt(hour) > parseInt(dd.getHours()) ){
+                return true;
+            }else if( parseInt(hour) == parseInt(dd.getHours()) && (parseInt(time) >= parseInt(dd.getMinutes())) ){
+                return true;
+            }
+            return false;
+        }
+        var GetDateStr = function(Dcompare, Tcompare) {
+            var dd = new Date();
+            dd.setDate(dd.getDate());//获取当天日期
+            var y = dd.getFullYear();
+            var m = dd.getMonth()+1;//获取当前月份的日期
+            var d = dd.getDate();
+            var today = y+"_"+m+"_"+d;
+            if(Dcompare > today){
+                return true;
+            }else if( (Dcompare == today) && GetTimeStr(Tcompare)){
+                return true; 
+            }
+            return false;
+        }
+        var getParameterByName = function (name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+            return results == null ? "": decodeURIComponent(results[1]);
+        }
+        $("#id_region").text(getParameterByName("region"));
+        $("#id_group_area").text(getParameterByName("group_area"));
+        $("#id_type").text(getParameterByName("type"));
+        $("#id_num").text(getParameterByName("num"));
+        $("#id_passwordM").text(getParameterByName("passwordM"));
+        $("#id_password").text(getParameterByName("password"));
+        $("#id_date").text(getParameterByName("date").replace(/_/g,"-"));
+        $("#id_time").text(getParameterByName("time").replace("_",":"));
+        if(GetDateStr(getParameterByName("date"),getParameterByName("time"))){
+            $("#id_state").text("有效");
+        }else{
+            $("#id_state").text("已失效");
+        }
+
+    </script>
+</html>

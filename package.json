@@ -1,0 +1,34 @@
+{
+  "name": "soda",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "betterScripts": {
+    "server-dev": {
+      "command": "nodemon index",
+      "env": {
+        "PORT": "3001"
+      }
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "append-query": "^1.1.0",
+    "body-parser": "^1.15.1",
+    "browser-sync": "^2.11.0",
+    "classnames": "^2.2.5",
+    "co": "^4.6.0",
+    "compression": "^1.6.2",
+    "express": "^4.13.4",
+    "express-jwt": "^3.4.0",
+    "forever": "^0.15.3",
+    "marked": "^0.3.6",
+    "moment": "^2.13.0",
+    "mysql": "^2.10.2",
+    "sqlite3": "^3.1.11"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-regenerator": "^6.24.1"
+  }
+}

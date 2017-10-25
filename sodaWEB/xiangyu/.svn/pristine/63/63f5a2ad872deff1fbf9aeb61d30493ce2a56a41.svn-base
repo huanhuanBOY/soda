@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>相寓</title>
+  <meta name="keywords" content="" />
+    <meta name="description" content="" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=10;chrome=1;" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="<viewp></viewp>ort" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" href="./c/user/style.css">
+  <link rel="stylesheet" href="./c/manager/temp.css">
+  <link rel="stylesheet" href="./c/common/loading.css">
+  <style type="text/css">.loading{position:fixed;top:50%;left:50%;transform:translate3d(-50%,-50%,0);width:140px;height:110px;padding:20px;background-color:rgba(0,0,0,.7);border:none;border-radius:8px;z-index:20;text-align:center}.loading img{width:50px;margin-bottom:5px}.loading .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background-color:#2b91f9;margin-right:13px}.loading .dot:last-child{margin-right:0}.loading .dot:first-child{animation:twinkle 2s ease .66s infinite}.loading .dot:nth-child(2){animation:twinkle 2s ease 1.32s infinite}.loading .dot:nth-child(3){animation:twinkle 2s ease 1.98s infinite}.loading p{color:#fff;font-size:14px}.loading.active{display:block}@keyframes twinkle{0%{opacity:1}33%{opacity:.7}68%{opacity:.35}to{opacity:1}}
+  </style>
+  <style type="text/css">.tip{display:none;min-width:140px;min-height:105px;padding:10px;background-color:rgba(0,0,0,.7);border-radius:8px;position:fixed;top:50%;left:50%;transform:translate3d(-50%,-50%,0);z-index:999}.tip.show{display:block}.tip span{color:#FFFFFF;font-size:40px}.tip p{margin:20px 0;font-size:16px;color:#FFFFFF;text-align:center}
+  </style>
+  <style type="text/css">@keyframes twinkle{0%{opacity:1}33%{opacity:.7}68%{opacity:.35}to{opacity:1}}.login{overflow:hidden;width:100vw;height:100vh;min-height:500px}.login .logo{width:30%;margin:20% 35% 5%;min-height:100px}.login .logo img{max-width:100%}.login .login-form{padding:0 25px}.login .login-form .row{position:relative}.login .login-form .row.last{margin-top:30px}.login .login-form .row:first-child input{border-radius:4px 4px 0 0}.login .login-form input{padding:0 20px;width:100%;height:50px;border:1px solid #ddd;outline:none;font-size:16px;border-radius:0 0 4px 4px}.login .login-form .sms-btn{font-size: 16px;position:absolute;right:20px;top:5%;width:auto;height:90%;color:#2b91f9;line-height:90%;background-color:#fff;border:none;border-radius:4px;margin:0;outline:none!important}.login .login-form .sms-btn:active{background-color:#e6e6e6}.login .login-form .sms-btn.incomplete{background-color:#cbd3d2}.login .login-form .sms-btn:active{background-color:#fff;color:#2385e9}.login .login-form .sms-btn.counting{color:#ccc;font-weight:400;text-align:right}.login .login-form .submit{width:100%;height:45px;color:#fff;line-height:45px;background-color:#2b91f9;border:none;border-radius:4px;margin:0;outline:none!important;font-size:17px}.login .login-form .submit:active{background-color:#0777ea}.login .login-form .submit.incomplete{background-color:#cbd3d2}
+  </style>
+  <style type="text/css">@keyframes twinkle{0%{opacity:1}33%{opacity:.7}68%{opacity:.35}to{opacity:1}}.confirm{display:block;z-index:999;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.2)}.confirm .confirm-wrapper{padding:15px;border-radius:8px;width:290px;background-color:#FFFFFF;position:fixed;top:50%;left:50%;transform:translate3d(-50%,-50%,0);z-index:1000}.confirm .confirm-text{width:100%;margin:20px 0;font-size:16px;color:#333;text-align:center}.confirm .confirm-affirm{background-color:#2b91f9;color:#fff;font-size:15px;width:120px;height:40px;border:none;border-radius:20px}.confirm .confirm-affirm:active{background-color:#0777ea}.confirm .confirm-cancel{background-color:#fff;color:#999;font-size:15px;width:120px;height:40px;border:1px solid #ddd;border-radius:20px;margin-right:10px}.confirm .confirm-cancel:active{background-color:#e6e6e6}
+  </style>
+  <style type="text/css">@keyframes twinkle{0%{opacity:1}33%{opacity:.7}68%{opacity:.35}to{opacity:1}}.header{position:relative;height:50px;line-height:50px;text-align:center;z-index:5}.header .header-wrap{width:100%;height:50px;padding:0 10px;position:fixed;top:0;left:0;background-color:#601986;z-index:5}.header .iconfont{width:40px;font-size:22px;color:#888}.header .btn{margin-top:11px}.header .title{font-size:16px;white-space:nowrap;position:absolute;height:50px;left:50%;transform:translateX(-50%);color: #FFFFFF;}.header .refresh{float:right}.header .home{float:left}.header .close{float:right}.header .btn:active{background-color:#ddd}.header .complete{position:absolute;right:5px;top:0;font-size:24px;line-height:50px;color:#ff2263}
+  </style>
+  <style type="text/css">.empty-tip{width:100%;position:absolute;top:200px;left:50%;transform:translate3d(-50%,0,0);text-align:center}.empty-tip img{width:60%}</style>
+  <style type="text/css">@keyframes twinkle{0%{opacity:1}33%{opacity:.7}68%{opacity:.35}to{opacity:1}}.header .logout{float:right}.header .today{float:left;box-sizing:content-box;width:auto;height:26px;padding:0 10px;border:1px solid #FFFFFF;border-radius:13px;outline:none;background-color:transparent;line-height:26px;color:#FFFFFF;font-size:13px;white-space:nowrap}.header .month{font-size:16px;color:#2b91f9;font-weight:400}.calender{width:100%;height:56px;position:relative;z-index:5}.calender .calender-wrap{width:100%;position:fixed;top:50px;left:0;background-color:#fff;border-bottom:1px solid #ddd;z-index:5}.calender .calender-box{width:100%;padding:0 25px;overflow:auto}.calender .calender-list{list-style:none}.calender .calender-item{float:left;width:80px;height:56px;text-align:center;color:#999;border-bottom:4px solid transparent}.calender .calender-item:active{background-color:#ddd}.calender .calender-item.current{border-color:#2b91f9;color:#2b91f9}.calender .calender-item .date{font-size:18px;line-height:1}.calender .calender-item .week{font-size:13px}.calender .calender-item p{line-height:28px;font-size:16px}.calender .iconfont{position:absolute;top:0;width:40px;line-height:56px;font-size:24px;color:#cbd3d2;z-index:5;text-align:center}.calender .iconfont:active{background-color:#ddd}.calender .icon-zuojiantou{left:0}.calender .icon-youjiantou{right:0}.task-list table,.task-list tbody,.task-list thead,.task-list tr{width:100%}.task-list-item{min-height:80px;padding:0 10px;border-bottom:1px solid #ddd}.task-list-item .row{line-height:20px}.task-list-item .divide{height:5px}.task-list-item .task-status{vertical-align:top;color:#cbd3d2;font-size:1.2rem;width:20px}.task-list-item .task-title{color:#333;font-size:16px;font-weight:700}.task-list-item .task-date{color:#777;font-size:14px}.task-list-item .task-lock{margin-left:25px;color:#777;font-size:14px}.task-list-item .task-lock .num{color:#2b91f9}.task-list-item .task-lock-hidden{display:none}.task-list-item .task-comment{font-size:14px;color:#777}.task-list-item .summary-btn{box-sizing:content-box;width:auto;height:26px;padding:0 10px;border:1px solid #2b91f9;border-radius:13px;outline:none;background-color:transparent;line-height:26px;color:#2b91f9;font-size:13px;white-space:nowrap}.task-list-item .summary-btn.complete{color:#999;border-color:#999}.task-list-item:active{background-color:#ddd}
+  </style>
+  <style type="text/css">/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+  </style>
+  <style type="text/css">@font-face{font-family:iconfont;src:url(5faea53a9f1ea0f024020df5dba197dc.eot);src:url(5faea53a9f1ea0f024020df5dba197dc.eot#iefix) format("embedded-opentype"),url(789a9d5432382619def2d10dc1ef02f1.woff) format("woff"),url(57e4645efcb0eceb915f5d4ce7aea5bd.ttf) format("truetype"),url(f33e737da09a70745f64efa7c5ea94eb.svg#iconfont) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}.icon-chenggong:before{content:"\E600"}.icon-dianliang:before{content:"\E601"}.icon-dianliangyichang:before{content:"\E602"}.icon-dingwei:before{content:"\E603"}.icon-guanbi:before{content:"\E604"}.icon-tianjia:before{content:"\E605"}.icon-tuichu:before{content:"\E606"}.icon-wufakaimen:before{content:"\E607"}.icon-xinhao:before{content:"\E608"}.icon-yanzhengmacuowu:before{content:"\E609"}.icon-lixian:before{content:"\E60A"}.icon-shuaxin:before{content:"\E60B"}.icon-zhuye:before{content:"\E60C"}.icon-tuichu1:before{content:"\E60D"}.icon-mensuo:before{content:"\E60E"}.icon-xuanzhong:before{content:"\E6F5"}.icon-yianzhuangyoukong:before{content:"\E6F6"}
+  </style>
+  <style type="text/css">@keyframes twinkle{0%{opacity:1}33%{opacity:.7}68%{opacity:.35}to{opacity:1}}.clearfix:after{content:" ";display:table;clear:both}body,html{height:100%;width:100%;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;-webkit-user-select:none;user-select:none;font-family:PingFangSC,noto sans,Helvetica Neue,Helvetica,STHeiTi,sans-serif}body{background-color:white}a,img{-webkit-touch-callout:none}*{box-sizing:border-box;margin:0;padding:0}.viewport{position:relative;width:100%;height:100%}.content{position:absolute;width:100%;top:0}
+  </style>
+
+</head>
+<body id="mybody">
+  <div class="wrapper">
+
+    <div id="id_list_page">
+      <header class="header">
+        <div class="header-wrap clearfix">
+          <span id="id_username" class="today btn"></span>
+          <p id="id_user_phone" class="title"></p>
+        </div>
+      </header>
+      <ul id="id_main_ul" class="skin_wrap_ul">
+          <li>
+              <div>
+                <div>
+                  <div class="lock_first">
+                    锁名：123
+                  </div>
+                </div>
+                <div class="lock_second">
+                  <div class="itemleft60">
+                    <div>修改密码</div>
+                  </div>
+                  <div class="itemright40">
+                    <div>
+                      在线
+                    </div>
+                  </div>
+                </div>
+                <div>
+                    <div class="lock_third">
+                      地址
+                    </div>
+                  </div>
+              </div>
+            </li>
+            <li>
+                <div class="item">
+                  <div class="itemleft">
+                    <div class="password">
+                      <img src="./i/key.png" />
+                    </div>
+                  </div>
+                  <div class="itemright">
+                    <div class="itemleftleft">
+                      <div class="region">
+                      </div>
+                      <div class="group_area">
+                        </div>
+                    </div>
+                    <div class="itemleftright">
+                      <div class="room_type">
+                        </div>
+                        <div class="number">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+      </ul>
+    </div>
+
+    <div id="id_register_page" class="login" style="display:none;">
+      <header class="header">
+            <div class="header-wrap clearfix" style="color:white">
+              <div id="id_goback_pass" style="float: left;width: 10%;font-size:30px;">⇦</div><div>相寓用户注册</div>
+            </div>
+      </header>
+      <div class="login-form">
+          <div class="phold10"></div>
+          <div class="phold50"><span>
+            <select id="id_question1" class="formline">
+              <option disabled selected>密保问题1</option>
+              <option>我的真实姓名是？</option>
+              <option>我父亲的真实姓名是？</option>
+              <option>我最喜爱的颜色是？</option>
+              <option>我最喜爱的老师的姓名是?</option>
+              <option>我暗恋的对象是？</option>
+            </select></span>
+          </div>
+          <div class="phold5"></div>
+          <div class="phold50"><input placeholder="请输入答案" id="id_answer1"/></div>
+          <div class="phold10"></div>
+          <div class="phold1_gray"></div>
+          <div class="phold10"></div>
+          <div class="phold50"><span>
+              <select id="id_question2" class="formline">
+                <option disabled selected>密保问题2</option>
+                <option>我的真实姓名是？</option>
+                <option>我父亲的真实姓名是？</option>
+                <option>我最喜爱的颜色是？</option>
+                <option>我最喜爱的老师的姓名是?</option>
+                <option>我暗恋的对象是？</option>
+              </select></span>
+            </div>
+            <div class="phold5"></div>
+            <div class="phold50"><input placeholder="请输入答案" id="id_answer2"/></div>
+            <div class="phold10"></div>
+            <div class="phold1_gray"></div>
+            <div class="phold10"></div>
+            <div class="phold50"><span>
+                <select id="id_question3" class="formline">
+                  <option disabled selected>密保问题3</option>
+                  <option>我的真实姓名是？</option>
+                  <option>我父亲的真实姓名是？</option>
+                  <option>我最喜爱的颜色是？</option>
+                  <option>我最喜爱的老师的姓名是?</option>
+                  <option>我暗恋的对象是？</option>
+                </select></span>
+            </div>
+            <div class="phold5"></div>
+            <div class="phold50"><input placeholder="请输入答案" id="id_answer3"/></div>
+            <div class="phold10"></div>
+            <div class="phold1_gray"></div>
+            <div class="phold10"></div>
+          <div><input id="id_phone_regist" type="tel" placeholder="请输入手机号"></div>
+          <div class="phold10"></div>
+          <div class="row">
+            <input id="id_sms_code_regist" type="tel" placeholder="请输入验证码">
+            <button id="id_get_sms_regist" class="sms-btn" type="button">获取验证码</button>
+          </div>
+          <div class="row last">
+            <button id="id_submit_register" class="submit invalid">提交</button>
+          </div>
+      </div>
+    </div>
+
+
+    <div id="id_change_password_pass_page" class="login"  style="display:none;">
+        <header class="header">
+            <div class="header-wrap clearfix" style="color:white">
+             <div id="id_goback_pass" style="float: left;width: 10%;font-size:30px;">⇦</div><div>修改密码</div>
+            </div>
+        </header>
+        <div class="login-form">
+            <div class="phold70"></div>
+            <div><input id="id_old_password_pass" type="password" placeholder="请输入旧密码"></div>
+            <div class="phold20"></div>
+            <div><input id="id_new_password1_pass" type="password" placeholder="请输入新密码"></div>
+            <div class="phold20"></div>
+            <div><input id="id_new_password2_pass" type="password" placeholder="请再次输入新密码"></div>
+            <div class="phold20"></div>
+            <div class="row last">
+                <button id="id_submit_change_pass_pass" class="submit invalid">提交</button>
+              </div>
+        </div>
+    </div>
+
+
+    <div id="id_change_password_ques_page"  class="login" style="display:none;">
+        <header class="header">
+            <div class="header-wrap clearfix" style="color:white">
+              <div id="id_goback_ques" style="float: left;width: 10%;font-size:30px;">⇦</div><div>修改密码</div>
+            </div>
+      </header>
+      <div class="login-form">
+          <div class="phold10"></div>
+          <div class="phold30">
+            <span id="id_question1_change_ques">我的真实姓名是？</span>
+          </div>
+          <div class="phold5"></div>
+          <div class="phold50"><input placeholder="请输入答案" id="id_answer1_change_ques"/></div>
+          <div class="phold10"></div>
+          <div class="phold1_gray"></div>
+          <div class="phold10"></div>
+          <div class="phold30">
+            <span id="id_question2_change_ques">我最喜爱的颜色是？</span>
+          </div>
+          <div class="phold5"></div>
+          <div class="phold50"><input placeholder="请输入答案" id="id_answer2_change_ques"/></div>
+          <div class="phold10"></div>
+          <div class="phold1_gray"></div>
+          <div class="phold10"></div>
+          <div class="phold30">
+             <span id="id_question3_change_ques">我暗恋的对象是？</span>
+          </div>
+            <div class="phold5"></div>
+            <div class="phold50"><input placeholder="请输入答案" id="id_answer3_change_ques"/></div>
+            <div class="phold10"></div>
+            <div class="phold1_gray"></div>
+            <div class="phold10"></div>
+          <div><input id="id_new_password1_ques" type="password" placeholder="请输入新密码"></div>
+          <div class="phold5"></div>
+          <div><input id="id_new_password2_ques" type="password" placeholder="请再次输入新密码"></div>
+          <div class="phold10"></div>
+          <div class="row last">
+            <button id="id_submit_change_pass_ques" class="submit invalid">提交</button>
+          </div>
+      </div>
+
+    </div>
+
+
+    <div id="id_app"  style="display:none;">
+      <div data-reactroot="" class="viewport">
+        <div class="login">
+          <div class="logo">
+            <img src="./i/xiangyu.jpg" alt="logo">
+          </div>
+          <div class="login-form">
+            <div class="row">
+              <input id="id_phone" type="tel" placeholder="请输入手机号">
+            </div>
+            <div class="row">
+              <input id="id_sms_code" type="tel" placeholder="请输入验证码" style="border-top: none;">
+              <button id="id_get_sms" class="sms-btn" type="button">获取验证码</button>
+            </div>
+            <div class="row last">
+              <button id="id_login" class="submit invalid">登录</button>
+              <div class="phold10"></div>
+              <button id="id_register" class="submit invalid">用户注册</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="id_mask_wrap" class="mask_wrap" style="display:none;">
+    <div id="id_mask_bg"class="mask_bg"></div>
+    <div id="id_wrap_passwd" class="mask_d iv xycenter wrap_passwd" style="display:none;">
+      <div id="id_btn_close_rule" class="mask_close mask_close_grey"></div>
+      <div class="phold20"></div>
+      <p class="p_1 " style="font-size: 20px; height:30px"><span class="p_left">正门密码</span><span id="id_password1" class="p_right"></span></p> 
+      <p class="p_1 " style="font-size: 20px; height:30px"><span class="p_left">内门密码</span><span id="id_password2" class="p_right"></span></p>
+      <p class="p_1 " style="font-size: 20px; height:30px"><span class="p_left">房间编号</span><span id="id_password_room" class="p_right"></span></p>
+      <div class="phold10"></div>
+      <div class="a_btn btn_h40 btn_hint">点击右上角分享给朋友</div>
+      <div class="phold10"></div>
+      <div id="id_sure_close" class="a_btn btn_h40 btn_grey">关闭</div>
+    </div>
+    <div id="id_wrap_loading" class="mask_d iv xycenter" style="display:none;">
+        <div class="row clearfix">
+        <div class="square one"></div>
+        <div class="square two"></div>
+        <div class="square three"></div>
+        </div>
+
+        <div class="row clearfix">
+        <div class="square eight"></div>
+        <div class="square nine"></div>
+        <div class="square four"></div>
+        </div>
+
+        <div class="row clearfix">
+        <div class="square seven"></div>
+        <div class="square six"></div>
+        <div class="square five"></div>
+        </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="./j/common/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="./j/common/common.js"></script>
+<script type="text/javascript" src="./j/common/share.js"></script>
+<script type="text/javascript" src="./j/common/singleRequest.js"></script>
+<script type="text/javascript" src="./j/user/dataControl.js"></script>
+</body>
+</html>
